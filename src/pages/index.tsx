@@ -28,7 +28,7 @@ export default function Home() {
           >
             <Suspense fallback={null}>
               <GltfModel modelPath='/headset.glb' />
-              {/* <Environment files="/photo_studio_loft_hall_2k.hdr"  /> */}
+              <Environment files="/photo_studio_loft_hall_2k.hdr"  />
               <OrbitControls />
             </Suspense>
           </Canvas>
