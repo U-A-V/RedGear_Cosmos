@@ -1,9 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import { Suspense } from 'react'
+import styles from '@/styles/Home.module.scss'
+import {Canvas} from '@react-three/fiber'
 
-const inter = Inter({ subsets: ['latin'] })
+import GltfModel from '@/components/gltfModel/gltfModel'
+import { OrbitControls } from '@react-three/drei'
+import { Environment } from '@react-three/drei/core'
+import Specifications from '@/components/specification/specification'
 
 export default function Home() {
   return (
@@ -15,7 +18,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        
+        <div className={styles.scene}>
+          <Specifications />
+          <Canvas
+          camera={{
+            position:[0,8,-5],
+            rotation:[0,0,0]
+          }}
+          >
+            <Suspense fallback={null}>
+              <GltfModel modelPath='/headset.glb' />
+              {/* <Environment files="/photo_studio_loft_hall_2k.hdr"  /> */}
+              <OrbitControls />
+            </Suspense>
+          </Canvas>
+        </div>
       </main>
     </>
   )
