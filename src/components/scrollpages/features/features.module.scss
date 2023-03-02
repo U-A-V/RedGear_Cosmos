@@ -1,0 +1,25 @@
+.container{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100vh;  
+    overflow-x: hidden;
+    width: 100vw;
+    section{
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        width: 100vw;
+        height: 100vh;
+        h1{
+            font-size: 5rem;
+            font-weight: 800;
+            font-family: sans-serif;
+            margin: 1rem 0;
+        }
+        h2{
+            font-size: 3.5rem;
+            font-weight: 800;
+            font-family: sans-serif;
+        }
+    }
+}

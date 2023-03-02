@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 304.2 300.4" style="enable-background:new 0 0 304.2 300.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#010101;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#010101;stroke-width:2;}
+	.st2{fill:#010101;}
+</style>
+<symbol  id="cursor" viewBox="-152 -150.2 304 300.4">
+	<path class="st0" d="M147.9,33.3L129.5,25c-7-3.3-15.4-0.2-18.7,6.8L88.6,79.6c-3.3,7-0.2,15.4,6.8,18.7c0,0,0,0,0,0l14.9,6.7
+		c57-60.9,53.8-156.5-7.1-213.4s-156.5-53.8-213.4,7.1C-136.4-73.4-151-36.5-151,1.8c0,38.3,14.6,75.3,40.9,103.2l14.4-6.7
+		c3.4-1.6,6-4.4,7.3-7.9c1.3-3.5,1.1-7.4-0.5-10.7l-22.3-47.8c-3.3-7-11.6-10.1-18.7-6.8l-17.8,8.3"/>
+	<path class="st1" d="M-98.2,115.7c0,0,43.1,33.5,99.3,33.5s97.3-33.5,97.3-33.5"/>
+	<circle class="st1" cx="0.1" cy="-0.6" r="65"/>
+	<line class="st1" x1="0.1" y1="-36.2" x2="0.1" y2="32.7"/>
+	<path class="st2" d="M-9.5,19c0.5-0.3,1.1-0.2,1.4,0.3c0,0,0,0,0,0l8.2,12.9l8.2-12.9c0.3-0.5,0.9-0.6,1.4-0.4
+		c0.5,0.3,0.6,0.9,0.4,1.4c0,0,0,0.1-0.1,0.1L0.9,34.6c-0.2,0.3-0.5,0.5-0.8,0.5c-0.3,0-0.7-0.2-0.9-0.5l-9.1-14.2
+		c-0.1-0.2-0.1-0.3-0.1-0.5C-10,19.5-9.8,19.2-9.5,19z"/>
+</symbol>
+<g id="Layer_2_1_">
+	<g id="Layer_1-2">
+		<g>
+			<defs>
+				<rect id="SVGID_1_" width="304.2" height="300.4"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<g style="clip-path:url(#SVGID_2_);">
+				
+					<use xlink:href="#cursor"  width="304" height="300.4" x="-152" y="-150.2" transform="matrix(1 0 0 1 152.0002 134.9789)" style="overflow:visible;"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

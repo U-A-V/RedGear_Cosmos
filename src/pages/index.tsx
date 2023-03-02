@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import { Suspense } from 'react'
 import styles from '@/styles/Home.module.scss'
 import {Canvas} from '@react-three/fiber'
-
-import GltfModel from '@/components/gltfModel/gltfModel'
-import { OrbitControls } from '@react-three/drei'
-import { Environment } from '@react-three/drei/core'
-import Specifications from '@/components/specification/specification'
+import { OrbitControls, ScrollControls, Scroll, PresentationControls, OrthographicCamera } from '@react-three/drei'
+import { Headset } from '@/components/model/Headset'
+import Features from '@/components/scrollpages/features/features'
+function DEG2RAD(x:number){
+ return  (x/180)*Math.PI;
+}
 
 export default function Home() {
   return (
@@ -19,18 +19,19 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.scene}>
-          <Specifications />
           <Canvas
           camera={{
-            position:[0,8,-5],
-            rotation:[0,0,0]
-          }}
+            position:[0,0,0],          }}
           >
-            <Suspense fallback={null}>
-              <GltfModel modelPath='/headset.glb' />
-              <Environment files="/photo_studio_loft_hall_2k.hdr"  />
-              <OrbitControls />
-            </Suspense>
+              <ScrollControls>
+                <PresentationControls >
+
+                    <Headset position={[0,-3,-10]} rotation={[DEG2RAD(-15),DEG2RAD(225),DEG2RAD(5),'XYZ']} scale={2} />
+                </PresentationControls>
+                <Scroll html >
+                  <Features />
+                </Scroll>
+              </ScrollControls>
           </Canvas>
         </div>
       </main>
