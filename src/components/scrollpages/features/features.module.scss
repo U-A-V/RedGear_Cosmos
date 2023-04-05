@@ -1,25 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;800&display=swap');
 .container{
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    overflow-y: scroll;
-    height: 100vh;  
+    // overflow-y: scroll;
+    // height: 100vh;  
     overflow-x: hidden;
     width: 100vw;
     section{
         scroll-snap-align: center;
         scroll-snap-stop: always;
+        position:relative;
         width: 100vw;
         height: 100vh;
         h1{
-            font-size: 5rem;
-            font-weight: 800;
-            font-family: sans-serif;
-            margin: 1rem 0;
+            font-size: 6rem;
+            font-weight: 200;
+            font-family: 'Titillium Web', sans-serif;
+            margin: 1.5rem -.5rem;
+            line-height: 4rem;
         }
         h2{
-            font-size: 3.5rem;
-            font-weight: 800;
-            font-family: sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Titillium Web', sans-serif;
+        }
+        p{
+            font-size: 1.75rem;
+            font-weight: 500;
+            font-family: 'Titillium Web', sans-serif;
         }
     }
+}
+
+.container{
+    .title{
+        .titleTxt{
+            position:absolute;
+            bottom: 15rem;
+            left :5rem;
+        }
+    }
+    .sound{
+        .soundTxt{
+            position: absolute;
+            bottom: 17.5rem;
+            left :5rem;
+            h2{
+                font-size: 3rem;
+                font-weight: 300;
+                margin-left: .5rem;
+            }
+            p{
+                font-weight: 400;
+            }
+
+        }
+    }
+    .mic{
+        .micTxt{
+            position: absolute;
+            bottom: 17.5rem;
+            left :5rem;
+        }
+    }
+    .rgb{
+        .rgbTxt{
+            position: absolute;
+            bottom: 17.5rem;
+            left :5rem;
+        }
+    }
+    .headband{
+        .headbandTxt{
+            position: absolute;
+            bottom: 17.5rem;
+            left :5rem;
+        }
+    }
+    .purchase{
+        .btn{
+            position: absolute;
+            bottom: 20rem;
+            left :5rem;
+            // text-decoration: none;
+            h2{
+                font-weight: 300;
+                color: black;
+            }
+        }
+    }
+}
+
+.inline{
+    display: inline;
 }

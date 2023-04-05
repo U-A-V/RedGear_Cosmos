@@ -4,11 +4,18 @@ import {Canvas} from '@react-three/fiber'
 import { OrbitControls, ScrollControls, Scroll, PresentationControls, OrthographicCamera } from '@react-three/drei'
 import { Headset } from '@/components/model/Headset'
 import Features from '@/components/scrollpages/features/features'
+import { useRef } from 'react'
 function DEG2RAD(x:number){
  return  (x/180)*Math.PI;
 }
 
 export default function Home() {
+  const ref= useRef<HTMLDivElement>(null);
+  const props:JSX.IntrinsicElements["group"]={
+    position:[0,-3,-10],
+    rotation:[DEG2RAD(-15),DEG2RAD(225),DEG2RAD(5),'XYZ'],
+    scale:2
+  }
   return (
     <>
       <Head>
@@ -18,18 +25,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.scene}>
+        <div className={styles.scene} ref={ref}>
           <Canvas
           camera={{
             position:[0,0,0],          }}
           >
-              <ScrollControls>
+              <ScrollControls pages={6} damping={.3}>
                 <PresentationControls >
-
-                    <Headset position={[0,-3,-10]} rotation={[DEG2RAD(-15),DEG2RAD(225),DEG2RAD(5),'XYZ']} scale={2} />
+                    <Headset props={props} refer={ref}/>
                 </PresentationControls>
-                <Scroll html >
-                  <Features />
+                <Scroll html>
+                  <Features/>
                 </Scroll>
               </ScrollControls>
           </Canvas>
