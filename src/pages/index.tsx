@@ -4,13 +4,15 @@ import {Canvas} from '@react-three/fiber'
 import { OrbitControls, ScrollControls, Scroll, PresentationControls, OrthographicCamera } from '@react-three/drei'
 import { Headset } from '@/components/model/Headset'
 import Features from '@/components/scrollpages/features/features'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 function DEG2RAD(x:number){
  return  (x/180)*Math.PI;
 }
 
 export default function Home() {
   const ref= useRef<HTMLDivElement>(null);
+  const [color,setColor]=useState<string>("#00ff00")
+
   const props:JSX.IntrinsicElements["group"]={
     position:[0,-3,-10],
     rotation:[DEG2RAD(-15),DEG2RAD(225),DEG2RAD(5),'XYZ'],
@@ -31,12 +33,11 @@ export default function Home() {
             position:[0,0,0],          }}
           >
               <ScrollControls pages={6} damping={.3}>
-                <PresentationControls >
-                    <Headset props={props} refer={ref}/>
-                </PresentationControls>
                 <Scroll html>
-                  <Features/>
+                  <Features  color={color} setColor={setColor}/>
                 </Scroll>
+
+                <Headset props={props} refer={ref} color={color}/>
               </ScrollControls>
           </Canvas>
         </div>
