@@ -1,4 +1,5 @@
-![image](https://github.com/U-A-V/RedGear_Cosmos/assets/74284403/23fee58a-0b5a-4386-a6be-c0d335fa13cc)
+![redGear](https://github.com/U-A-V/RedGear_Cosmos/assets/74284403/58e568d3-483f-485e-8d98-6fa8a9c7f1f2)
+
 
 
 ## Getting Started
